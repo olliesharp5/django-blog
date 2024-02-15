@@ -1,11 +1,40 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>About</title>
-</head>
-<body>
-    <h1>About Us</h1>
-    <p>This is some information about our company.</p>
-</body>
-</html>
-```
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- about.html content starts here -->
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- About Page Column -->
+        <div class="col-12 mt-3 left">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h2 class="card-title">About Us</h2>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                Sed euismod eu lorem et ultricies. In porta lorem at dui semper porttitor. 
+                                Nullam quis cursus dui. Cras tincidunt vehicula tellus eu facilisis.
+                            </p>
+
+                            <hr />
+                            <p class="card-text text-muted h6">Page created on: 
+                                <!-- You can replace 'date' with the actual date the page was created -->
+                                <span id="date">{{ created_on }}</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- about.html content ends here -->
+{% endblock %}
+
+{% block copyright %}
+    Copyright 2023 Oliver Sharp
+{% endblock %}
