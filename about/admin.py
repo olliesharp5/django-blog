@@ -1,10 +1,9 @@
 from django.contrib import admin
 from .models import About
+from django_summernote.admin import SummernoteModelAdmin
 
 
-class AboutAdmin(admin.ModelAdmin):
-    list_display = ('title', 'updated_on')
-    search_fields = ('title', 'content')
+@admin.register(About)
+class AboutAdmin(SummernoteModelAdmin):
 
-# Register your models here.
-admin.site.register(About, AboutAdmin)
+    summernote_fields = ('content',)
